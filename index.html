@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <div class="container__card">
+      <div class="container__card-front">
+        <img src="images/card-logo.svg" alt="Logo" class="container__card-front__logo">
+
+        <div class="container__card-front__content">
+          <span class="container__card-front__content-span" id="credit-number">0000 0000 0000 0000</span>
+          <div class="container__card-front__content-bottom">
+            <h4 class="container__card-front__content-bottom__title" id="credit-name">Jane Appleseed</h4>
+            <span class="container__card-front__content-bottom-venciment">
+              <span id="credit-expedition-month">00</span>/<span id="credit-expedition-year">00</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container__card-back">
+        <div class="container__card-back__content">
+          <span class="container__card-back__content-cvc" id="credit-cvc">000</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container__right">
+      <form class="container__right-form active" action="#">
+        <div class="container__right-form__input-container">
+          <h4 class="container__right-form__input-container__text">Cardholder Name</h4>
+          <input type="text" id="cardholder-name" class="container__right-form__input-container__input" placeholder="e.g. Jane Appleseed" data-type="text">
+          <span class="container__right-form__input-container__error">Error</span>
+        </div>
+
+        <div class="container__right-form__input-container">
+          <h4 class="container__right-form__input-container__text">Card Number</h4>
+          <input type="text" id="card-number" class="container__right-form__input-container__input" placeholder="e.g. 1234 5678 9123 0000" data-type="number" maxlength="19" minlength="19">
+          <span class="container__right-form__input-container__error">Error</span>
+        </div>
+
+        <div class="container__right-form__input-container container--multiple__inputs">
+          <div class="container--multiple__inputs-left">
+            <h4 class="container__right-form__input-container__text">Exp. Date (MM/YY)</h4>
+            <div class="input-container">
+              <input type="text" class="container__right-form__input-container__input input--very__small" id="month-input" placeholder="MM" data-type="date" maxlength="2" minlength="2">
+              <input type="text" class="container__right-form__input-container__input input--very__small" id="year-input" placeholder="YY" data-type="date" maxlength="2" minlength="2">
+            </div>
+
+            <span class="container__right-form__input-container__error">Error</span>
+            
+          </div>
+
+          <div class="container--multiple__inputs-right">
+            <h4 class="container__right-form__input-container__text">CVC</h4>
+            <input type="text" class="container__right-form__input-container__input input--small" id="cvc-input" placeholder="e.g. 123" data-type="cvc" maxlength="3" minlength="3">
+            <span class="container__right-form__input-container__error">Error</span>
+          </div>
+        </div>
+
+        <button type="submit" class="container__right-form__submit">Confirm</button>
+      </form>
+
+      <div class="container__right-answer">
+        <img src="images/icon-complete.svg" alt="Icon Complete" class="container__right-answer__icon">
+        <h2 class="container__right-answer__title">Thank You!</h2>
+        <p class="container__right-answer__paragraph">We've added your card details</p>
+        <button class="container__right-answer__button">Continue</button>
+      </div>
+    </div>
+  </main>  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
